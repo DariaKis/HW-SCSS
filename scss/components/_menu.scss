@@ -1,0 +1,174 @@
+@import '../colors',
+        '../size',
+        '../text';
+@import '../mixin/mixinOwn';
+
+section{
+  & .aside{
+    align-items: center;
+    padding-right: 40px;
+
+    @include _1170 {
+      max-width: $own-width;
+    }
+    @include _996 {
+      padding-right: 0;
+      display: flex;
+    }
+    @include _768 {
+      max-width: $own-width;
+      justify-content: left;
+    }
+    @include _480 {
+      max-width: $own-width;
+      flex-direction: column-reverse;
+    }
+    .imgMenu{
+      padding: 0 10px;
+
+      @include _996 {
+        padding: 20px 90px 20px 0;
+      }
+      @include _768 {
+        padding: 20px 8px 40px 0;
+      }
+      @include _480 {
+        padding-top: 37px;
+      }
+    }
+    .menu_cover{
+      width: 140px;
+      @include _996 {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      @include _480 {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+      }
+      .menu{
+        justify-content: space-between;
+        margin-top: 9px;
+        @include _position;
+        @include _996 {
+          max-width: $own-width;
+          display: block;
+          margin-top: 0;
+        }
+        @include _768 {
+          margin-bottom: 20px;
+        }
+        @include _480 {
+          padding: 0;
+        }
+        @include _320 {
+          margin-right: 10px;
+        }
+         p{
+           color: $second-color;
+           font-size: $own-text;
+           width: 92px;
+           padding-bottom: 39px;
+           @include _996 {
+             padding-bottom: 0;
+             text-align: center;
+           }
+           @include _768 {
+             width: fit-content;
+           }
+           @include _480 {
+             width: auto;
+             padding-left: 0;
+           }
+           @include _320 {
+             font-size: 12px;
+             padding-left: 0;
+           }
+        }
+         img{
+          padding-left: 6px;
+          padding-right: 3px;
+          padding-bottom: 31px;
+           @include _996 {
+             padding-top: 0;
+             padding-bottom: 12px;
+             display: block;
+             margin: 0 auto;
+           }
+           @include _768 {
+             display: none;
+           }
+        }
+      }
+       .tweet {
+        @include _996 {
+          display: none;
+        }
+         p.aside_text{
+           @include _menuText;
+           @include _position;
+         }
+         button  {
+          @include _menuBtn;
+           @include _position;
+
+           img {
+            padding: 8px 4px;
+          }
+           p.aside_button{
+            @include _asideBtn;
+             @include _position;
+           }
+        }
+      }
+      .friends {
+        @include _996 {
+          display: none;
+        }
+         p.aside_text {
+           @include _menuText;
+           @include _position;
+        }
+         p.aside_subtext{
+          font-family: $font;
+          font-style: italic;
+          font-weight: 400;
+          font-size: 10px;
+          line-height: 19px;
+          margin-top: 10px;
+        }
+         button {
+           @include _menuBtn;
+           @include _position;
+           img {
+             padding: 8px 4px;
+           }
+           p.aside_button{
+             @include _asideBtn;
+             @include _position;
+           }
+         }
+      }
+    }
+
+  }
+
+  & #ex0{
+    padding-left: 3px;
+    @include _1170 {
+      padding-left: 3px;
+    }
+    @include _996 {
+      padding-top: 5px;
+    }
+    @include _768 {
+      padding-top: 0;
+    }
+  }
+
+
+}
+
+

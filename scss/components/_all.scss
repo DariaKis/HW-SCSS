@@ -1,0 +1,73 @@
+@import '../colors',
+'../size',
+'../text'
+;
+@import '../mixin/mixinOwn';
+
+* {
+  color: $first-color;
+  margin: $own-margin;
+  padding: $own-padding;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body{
+  width: $own-width;
+  margin: $own-margin;
+  padding: $own-padding;
+  font-family: $font;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  color: #000;
+
+  @include _1170 {
+    max-width: 100%;
+  }
+}
+
+.right{
+  @include _1170 {
+    width: $own-width;
+  }
+  @include _996 {
+    max-width: $own-width;
+  }
+
+}
+.left{
+  max-width: 17%;
+  @include _1170 {
+    max-width: 22%
+  }
+  @include _996 {
+    max-width: $own-width;
+  }
+  @include _768 {
+    max-width: $own-width;
+  }
+
+}
+.container{
+  max-width: 1366px;
+  margin: 3.37% 10.46% 0 10.46%;
+  display: flex;
+  @include _1170 {
+    max-width: $own-width;
+  }
+  @include _996 {
+    display: block;
+    margin-top: 0;
+  }
+  @include _768 {
+    margin: 0 39px;
+  }
+  @include _480 {
+    margin: 35px 0 0 0;
+  }
+}
+
+
+
+

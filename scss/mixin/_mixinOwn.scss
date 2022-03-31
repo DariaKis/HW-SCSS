@@ -1,0 +1,70 @@
+@import '../colors',
+'../size',
+'../text';
+
+@mixin _1170 {
+  @media (max-width: 1170px){
+    @content;
+  }
+}
+@mixin _996 {
+  @media (max-width: 996px){
+    @content;
+  }
+}
+@mixin _768 {
+  @media (max-width: 768px){
+    @content;
+  }
+}
+
+@mixin _480 {
+  @media (max-width: 480px){
+    @content;
+  }
+}
+@mixin _320{
+  @media (max-width: 320px){
+    @content;
+  }
+}
+
+@mixin _position{
+  display: flex;
+  align-items: center;
+}
+
+@mixin _menuText{
+  font-family: $second-font;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  border-bottom: 1px dashed #E5E5E5;
+  padding: 5px;
+}
+
+@mixin _menuBtn{
+  justify-content: center;
+  height: 30px;
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  width: 100%;
+}
+
+@mixin _asideBtn{
+  font-family: $font;
+  font-style: italic;
+  font-size: 10px;
+  line-height: 12px;
+  color: #34ACA7;
+  padding-right: 8px;
+}
+@mixin _cards{
+  height: 143px;
+  border: 1px solid #E5E5E5;
+}

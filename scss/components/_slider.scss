@@ -1,0 +1,297 @@
+@import '../colors',
+'../size',
+'../text'
+;
+@import '../mixin/mixinOwn';
+
+section {
+  .slider {
+    max-width: $own-width;
+    .main {
+      margin-bottom: 30px;
+      @include _1170 {
+        margin-bottom: 18px;
+      }
+      .banner {
+        max-width: $own-width;
+        height: 445px;
+        background: url("../../../HomeWorkSCSS/scss/components/img/baner.jpg") no-repeat center top/cover;
+        @include _768 {
+          height: 353px;
+        }
+        .type {
+          padding-top: 282px;
+          @include _768 {
+            padding-top: 262px;
+          }
+          p.title {
+            width: 272px;
+            height: 49px;
+            background-color: white;
+            font-size: 22px;
+            line-height: 22px;
+            text-align: center;
+            letter-spacing: 0.01em;
+            padding-left: 24px;
+             @include _position;
+             @include _768 {
+               width: $own-width;
+               opacity: 0.6;
+               box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+             }
+          }
+          p.subtitle {
+            font-size: $own-text;
+            line-height: 14px;
+            background-color: $first-color;
+            color: white;
+            width: 487px;
+            height: 42px;
+            padding-left: 24px;
+             @include _position;
+             @include _768 {
+               width: $own-width;
+             }
+             @include _480{
+               padding-right: 10px;
+             }
+          }
+        }
+      }
+      .about {
+        display: flex;
+        @include _768 {
+          display: none;
+        }
+        .tabs {
+          width: 25%;
+          color: $second-color;
+          background-color: #EFF8F7;
+          &:active{
+            background-color: #D9EFEC;
+          }
+           .wrapp {
+             padding-top: 26px;
+             padding-bottom: 22px;
+             padding-left: 20px;
+             @include _1170 {
+               height: 35px;
+               padding-top: 10px;
+               text-align: center;
+             }
+             p.wrapp_title {
+               font-size: 18px;
+               line-height: 18px;
+               font-style: normal;
+               color: $second-color;
+               @include _1170 {
+                 font-size: 16px;
+               }
+             }
+             p.wrapp_subtitle {
+               font-size: 10px;
+               line-height: 19px;
+               color: $second-color;
+               font-style: italic;
+               @include _1170 {
+                 display: none;
+               }
+             }
+           }
+        }
+      }
+    }
+  }
+   .sub{
+      margin-bottom: 30px;
+      border-bottom: 1px dashed $border-color;
+      border-top: 1px dashed $border-color;
+      max-height: 100%;
+      @include _1170 {
+        margin-bottom: 18px;
+      }
+    &_wrapper{
+      margin: 10px 18px 14px;
+      @include _position;
+      @include _768 {
+        display: block;
+        justify-content: space-evenly;
+      }
+      .form{
+        @include _position;
+        @include _768 {
+          max-width: $own-width;
+          margin-bottom: 16px;
+        }
+        img{
+          height: 26px;
+          margin-right: 16px;
+        }
+        p.subscribe{
+          font-size: $own-text;
+          line-height: 16px;
+          max-width: 530px;
+          margin-right: 24px;
+          @include _1170 {
+            margin-right: 8px;
+          }
+          @include _768 {
+            max-width: 600px;
+          }
+        }
+      }
+        .form1{
+          @include _position;
+          @include _768 {
+            max-width: $own-width;
+            margin-bottom: 16px;
+          }
+           input{
+              width: 160px;
+              height: 22px;
+              background: #FFFFFF;
+              border: 1px solid $border-color;
+              box-sizing: border-box;
+              font-weight: 400;
+              font-size: 10px;
+              line-height: 10px;
+              color: $border-color;
+              padding: 6px;
+              margin-right: 18px;
+              @include _768 {
+                padding: 6px;
+                margin-right: 36px;
+                width: $own-width;
+              }
+           }
+          button{
+            width: 80px;
+            background: linear-gradient(180deg, #F4F3F3 0%, #BBB9B9 100%);
+            border: 1px solid $border-color;
+            box-sizing: border-box;
+            border-radius: 2px;
+            padding: 6px 18px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 10px;
+            text-align: center;
+            color: $first-color;
+
+          }
+        }
+      }
+    }
+    .blocks{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    @include _768 {
+      flex-wrap: wrap;
+      padding: 0 40px;
+    }
+    @include _480 {
+      width: $own-width;
+      flex-wrap: nowrap;
+      display: block;
+      justify-content: center;
+    }
+     .card{
+      width: 207px;
+      @include _1170 {
+        width: 157px;
+        padding: 0;
+      }
+      @include _768 {
+        width: 256px;
+        margin: 0 auto;
+      }
+      @include _480 {
+        max-width: 376px;
+        display: block;
+        margin: 0 auto;
+        padding-bottom:30px ;
+      }
+       .img1{
+          background: url("../../../HomeWorkSCSS/scss/components/img/1tab.png") no-repeat center top/cover;
+           @include _cards;
+          @include _1170 {
+            height: 113px;
+          }
+          @include _768 {
+            height: 175px;
+          }
+      }
+       .img2{
+          background: url("../../../HomeWorkSCSS/scss/components/img/2tab.jpg") no-repeat center top/cover;
+           @include _cards;
+          @include _1170 {
+            height: 113px;
+          }
+          @include _768 {
+            height: 175px;
+          }
+      }
+       .img3{
+          background: url("../../../HomeWorkSCSS/scss/components/img/3tab.png") no-repeat center top/cover;
+          @include _cards;
+          @include _1170 {
+            height: 113px;
+          }
+          @include _768 {
+            height: 175px;
+          }
+      }
+       .img4{
+          background: url("../../../HomeWorkSCSS/scss/components/img/4tab.png") no-repeat center top/cover;
+           @include _cards;
+           @include _1170 {
+            height: 113px;
+          }
+          @include _768 {
+            height: 175px;
+          }
+      }
+       p.topic{
+        height: 42px;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 21px;
+        letter-spacing: -0.02em;
+        color: $second-color;
+        margin-top: 9px;
+         @include _768 {
+           height: auto;
+         }
+      }
+       p.subtopic{
+        font-family: $font;
+        font-style: normal;
+        font-size: $own-text;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        margin-top: 11px;
+        font-weight: 400;
+        padding-right: 3px;
+         @include _480 {
+           margin-top: 15px;
+         }
+      }
+       p.date{
+        font-style: normal;
+        font-size: $own-text;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        color: $border-color;
+        margin-top: 11px;
+         @include _768{
+           margin-bottom: 30px;
+         }
+         a{
+          text-decoration: none;
+          color: $second-color;
+        }
+      }
+    }
+  }
+}
