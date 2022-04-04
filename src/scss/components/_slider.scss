@@ -15,7 +15,7 @@ section {
       .banner {
         max-width: $own-width;
         height: 445px;
-        background: url("../../../HomeWorkSCSS/scss/components/img/baner.jpg") no-repeat center top/cover;
+        background: url("img/baner.jpg") no-repeat center top/cover;
         @include _768 {
           height: 353px;
         }
@@ -213,7 +213,7 @@ section {
         padding-bottom:30px ;
       }
        .img1{
-          background: url("../../../HomeWorkSCSS/scss/components/img/1tab.png") no-repeat center top/cover;
+          background: url("img/1tab.png") no-repeat center top/cover;
            @include _cards;
           @include _1170 {
             height: 113px;
@@ -223,7 +223,7 @@ section {
           }
       }
        .img2{
-          background: url("../../../HomeWorkSCSS/scss/components/img/2tab.jpg") no-repeat center top/cover;
+          background: url("img/2tab.jpg") no-repeat center top/cover;
            @include _cards;
           @include _1170 {
             height: 113px;
@@ -233,7 +233,7 @@ section {
           }
       }
        .img3{
-          background: url("../../../HomeWorkSCSS/scss/components/img/3tab.png") no-repeat center top/cover;
+          background: url("img/3tab.png") no-repeat center top/cover;
           @include _cards;
           @include _1170 {
             height: 113px;
@@ -243,7 +243,7 @@ section {
           }
       }
        .img4{
-          background: url("../../../HomeWorkSCSS/scss/components/img/4tab.png") no-repeat center top/cover;
+          background: url("img/4tab.png") no-repeat center top/cover;
            @include _cards;
            @include _1170 {
             height: 113px;

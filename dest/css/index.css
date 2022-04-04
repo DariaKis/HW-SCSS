@@ -340,25 +340,40 @@ section .slider .main {
     margin-bottom: 18px;
   }
 }
-section .slider .main .banner {
+section .slider .main .own-slider {
+  max-width: 100%;
+  position: relative;
+}
+section .slider .main .own-slider .banner {
   max-width: 100%;
   height: 445px;
-  background: url("../../../HomeWorkSCSS/scss/components/img/baner.jpg") no-repeat center top/cover;
 }
 @media (max-width: 768px) {
-  section .slider .main .banner {
+  section .slider .main .own-slider .banner {
     height: 353px;
   }
 }
-section .slider .main .banner .type {
+section .slider .main .own-slider .banner:nth-child(1) {
+  background: url("../../../../HomeWorkSCSS/components/img/baner.jpg") no-repeat center top/cover;
+}
+section .slider .main .own-slider .banner:nth-child(2) {
+  background: url("../../../../HomeWorkSCSS/components/img/banner3.jpeg") no-repeat center top/cover;
+}
+section .slider .main .own-slider .banner:nth-child(3) {
+  background: url("../../../../HomeWorkSCSS/components/img/banner4.jpeg") no-repeat center top/cover;
+}
+section .slider .main .own-slider .banner:nth-child(4) {
+  background: url("../../../../HomeWorkSCSS/components/img/banner6.jpeg") no-repeat center top/cover;
+}
+section .slider .main .own-slider .banner .type {
   padding-top: 282px;
 }
 @media (max-width: 768px) {
-  section .slider .main .banner .type {
+  section .slider .main .own-slider .banner .type {
     padding-top: 262px;
   }
 }
-section .slider .main .banner .type p.title {
+section .slider .main .own-slider .banner .type p.title {
   width: 272px;
   height: 49px;
   background-color: white;
@@ -371,13 +386,13 @@ section .slider .main .banner .type p.title {
   align-items: center;
 }
 @media (max-width: 768px) {
-  section .slider .main .banner .type p.title {
+  section .slider .main .own-slider .banner .type p.title {
     width: 100%;
     opacity: 0.6;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
 }
-section .slider .main .banner .type p.subtitle {
+section .slider .main .own-slider .banner .type p.subtitle {
   font-size: 14px;
   line-height: 14px;
   background-color: black;
@@ -389,13 +404,49 @@ section .slider .main .banner .type p.subtitle {
   align-items: center;
 }
 @media (max-width: 768px) {
-  section .slider .main .banner .type p.subtitle {
+  section .slider .main .own-slider .banner .type p.subtitle {
     width: 100%;
   }
 }
 @media (max-width: 480px) {
-  section .slider .main .banner .type p.subtitle {
+  section .slider .main .own-slider .banner .type p.subtitle {
     padding-right: 10px;
+  }
+}
+section .slider .main .own-slider a.previous, section .slider .main .own-slider a.next {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  background-color: #EFF8F7;
+}
+@media (max-width: 768px) {
+  section .slider .main .own-slider a.previous, section .slider .main .own-slider a.next {
+    display: block;
+  }
+}
+section .slider .main .own-slider a.previous:hover, section .slider .main .own-slider a.next:hover {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+section .slider .main .own-slider a.previous.next, section .slider .main .own-slider a.next.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
   }
 }
 section .slider .main .about {
@@ -411,10 +462,14 @@ section .slider .main .about .tabs {
   color: #34ACA7;
   background-color: #EFF8F7;
 }
-section .slider .main .about .tabs:active {
+section .slider .main .about .tabs.active {
+  background-color: #D9EFEC;
+}
+section .slider .main .about .tabs:hover {
   background-color: #D9EFEC;
 }
 section .slider .main .about .tabs .wrapp {
+  cursor: pointer;
   padding-top: 26px;
   padding-bottom: 22px;
   padding-left: 20px;
@@ -586,63 +641,66 @@ section .blocks .card {
     padding-bottom: 30px;
   }
 }
-section .blocks .card .img1 {
-  background: url("../../../HomeWorkSCSS/scss/components/img/1tab.png") no-repeat center top/cover;
-  height: 143px;
+section .blocks .card .cover-card {
   border: 1px solid #E5E5E5;
 }
+section .blocks .card .cover-card .img1 {
+  background: url("../../../../HomeWorkSCSS/components/img/1tab.png") no-repeat center top/cover;
+  height: 143px;
+  border: 11px solid #FFFFFF;
+}
 @media (max-width: 1170px) {
-  section .blocks .card .img1 {
+  section .blocks .card .cover-card .img1 {
     height: 113px;
   }
 }
 @media (max-width: 768px) {
-  section .blocks .card .img1 {
+  section .blocks .card .cover-card .img1 {
     height: 175px;
   }
 }
-section .blocks .card .img2 {
-  background: url("../../../HomeWorkSCSS/scss/components/img/2tab.jpg") no-repeat center top/cover;
+section .blocks .card .cover-card .img2 {
+  background: url("../../../../HomeWorkSCSS/components/img/2tab.jpg") no-repeat center top/cover;
   height: 143px;
-  border: 1px solid #E5E5E5;
+  border: 11px solid #FFFFFF;
 }
 @media (max-width: 1170px) {
-  section .blocks .card .img2 {
+  section .blocks .card .cover-card .img2 {
     height: 113px;
   }
 }
 @media (max-width: 768px) {
-  section .blocks .card .img2 {
+  section .blocks .card .cover-card .img2 {
     height: 175px;
   }
 }
-section .blocks .card .img3 {
-  background: url("../../../HomeWorkSCSS/scss/components/img/3tab.png") no-repeat center top/cover;
+section .blocks .card .cover-card .img3 {
+  background: url("../../../../HomeWorkSCSS/components/img/3tab.png") no-repeat center top/cover;
   height: 143px;
-  border: 1px solid #E5E5E5;
+  border: 11px solid #FFFFFF;
 }
 @media (max-width: 1170px) {
-  section .blocks .card .img3 {
+  section .blocks .card .cover-card .img3 {
     height: 113px;
   }
 }
 @media (max-width: 768px) {
-  section .blocks .card .img3 {
+  section .blocks .card .cover-card .img3 {
     height: 175px;
   }
 }
-section .blocks .card .img4 {
-  background: url("../../../HomeWorkSCSS/scss/components/img/4tab.png") no-repeat center top/cover;
+section .blocks .card .cover-card .img4 {
+  background: url("../../../../HomeWorkSCSS/components/img/4tab.png") no-repeat center top/cover;
   height: 143px;
-  border: 1px solid #E5E5E5;
+  border: 11px solid #FFFFFF;
 }
 @media (max-width: 1170px) {
-  section .blocks .card .img4 {
+  section .blocks .card .cover-card .img4 {
     height: 113px;
   }
 }
 @media (max-width: 768px) {
-  section .blocks .card .img4 {
+  section .blocks .card .cover-card .img4 {
     height: 175px;
   }
 }
